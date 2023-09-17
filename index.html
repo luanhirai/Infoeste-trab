@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    <title>Carrossel Personalizado</title>
+    <!-- Inclua os arquivos CSS e JavaScript do Bootstrap (substitua os URLs pelos locais corretos ou use um CDN) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="cabecalho">
@@ -73,6 +81,18 @@
         </div>
         <div class="conteudo">
             <img src="fotos/Texto do seu parágrafo (1).png" alt="">
+<body onload="selecionarPalestrante('google')">
+
+    <div class="d-flex justify-content-center">
+        <h1>Palestrante que irão nos pretigiar</h1>
+    </div>
+    <div class="palestras d-flex justify-content-center align-content-center border flex-column" >
+        <div class="botao-selecionar-palestrantes d-flex justify-content-start"  >
+            <button id="google" class="botao-participante clicado" onclick="selecionarPalestrante('google'), selecionarBotao(this)">Google</button>
+            <button id="curso-em-video" class="botao-participante" onclick="selecionarPalestrante('curso-em-video'), selecionarBotao(this)">Curso em Video</button>
+            <button id="totvs" class="botao-participante" onclick="selecionarPalestrante('totvs'), selecionarBotao(this)">Totvs</button>
+            <button id="meta" class="botao-participante" onclick="selecionarPalestrante('meta'), selecionarBotao(this)">Meta</button>
+            <button id="spotify" class="botao-participante" onclick="selecionarPalestrante('spotify'), selecionarBotao(this)">Spotify</button>
         </div>
     </header>
 
@@ -111,5 +131,26 @@
     
 
     <script src="assets/script.js"></script>
+        <div id="linha-abaixo-palestrante">
+
+        </div>
+        <div class="conteudo border d-flex flex-column justify-content-center align-items-center">
+            
+            <span class="data-que-a-palestra-ocorrera">data</span>
+            <span class="hora-que-a-palestra-ocorrera">hora</span>
+            <div class="foto-palestrante-e-talks d-flex flex-row justify-content-around">
+                <div class="talk border ">
+                    <h1>talk 1:</h1>
+                    <p class="talk1"> </p>
+                    <h1>talk 2: </h1>
+                    <p class="talk2"></p>
+                    <h1>talk 3: </h1>
+                    <p class="talk3"></p>
+                </div>
+                <img class="imagem-palestrante" src="imagem-totvs.jpg" width="600px" height="500px" alt="">
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
